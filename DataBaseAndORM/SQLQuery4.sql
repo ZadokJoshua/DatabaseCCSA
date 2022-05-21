@@ -13,4 +13,4 @@
 --[TotalStudents]) 
 --VALUES ('Desmond', 'Abdul', 'Ogun', 2003092);
 
-SELECT * FROM School Where TotalStudents > 300;
+SELECT * FROM School Where TotalStudents = 2003092;

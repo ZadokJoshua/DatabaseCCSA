@@ -35,5 +35,6 @@ public class FluentNHibernateHelper
     public void InitialiseSessionFactory()
     {
         _sessionFactory = Fluently.Configure().Database(); // Initialise Session Factory 
+        // Data Source = Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\hp\Documents\MyGeeDesmond.mdf;Integrated Security=True;Connect Timeout=30
     }
 }

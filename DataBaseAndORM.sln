@@ -5,7 +5,9 @@ VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataBaseAndORM", "DataBaseAndORM\DataBaseAndORM.csproj", "{BF26B961-82AA-41FA-8F44-92E5F867BC8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataConnections", "DataConnections\DataConnections.csproj", "{D06A9544-0ACD-494A-B674-6DDFC3789A5D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataConnections", "DataConnections\DataConnections.csproj", "{D06A9544-0ACD-494A-B674-6DDFC3789A5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataConnections2", "ConsoleApp1\DataConnections2.csproj", "{7404CF06-63D9-469D-B11D-F79092485BFC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{D06A9544-0ACD-494A-B674-6DDFC3789A5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D06A9544-0ACD-494A-B674-6DDFC3789A5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D06A9544-0ACD-494A-B674-6DDFC3789A5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7404CF06-63D9-469D-B11D-F79092485BFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7404CF06-63D9-469D-B11D-F79092485BFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7404CF06-63D9-469D-B11D-F79092485BFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7404CF06-63D9-469D-B11D-F79092485BFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

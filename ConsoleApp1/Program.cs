@@ -1,5 +1,7 @@
-﻿using FluentNHibernate.Cfg;
+﻿
+using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
+
 using NHibernate;
 using NHibernate.Tool.hbm2ddl;
 
@@ -9,8 +11,6 @@ Console.WriteLine(Guid.NewGuid().ToString());
 
 //var helper = new FluentNHibernateHelper();
 //helper.OpenSession();
-
-
 
 // Installed ORM - FluentNHibernate and Sql.Data.Sqlcilent
 public class FluentNHibernateHelper

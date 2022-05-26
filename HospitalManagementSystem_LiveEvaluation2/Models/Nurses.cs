@@ -8,6 +8,6 @@ namespace HospitalManagementSystem_LiveEvaluation2.Models
 {
     public class Nurses : Human
     {
-        public virtual Doctors Doctors { get; set; }
+        public virtual Doctors Doctor { get; set; }
     }
 }

@@ -1,12 +1,15 @@
-﻿using HospitalManagementSystem_LiveEvaluation2.Models;
+﻿using HospitalManagementSystem_LiveEvaluation2.Items;
+using HospitalManagementSystem_LiveEvaluation2.Models;
 
 namespace HospitalManagementSystem_LiveEvaluation2.Activities
 {
     public class Appointment : Activity
     {
         public virtual Doctors Doctor { get; set; }
-        public virtual string Condition { get; set; }
-        public virtual string Drugs { get; set; }
+        public virtual List<Condition> Condition { get; set; }
+        public virtual List<Drug> Drugs{ get; set; }
+        public virtual DateTime AppointmentTime { get; set; }
+
 
         IDictionary<string, decimal> billBreakdom = new Dictionary<string, decimal>();
 
@@ -48,6 +51,8 @@ namespace HospitalManagementSystem_LiveEvaluation2.Activities
             {
                 Console.WriteLine("Key: {0}, Value: {1}", kvp.Key, kvp.Value);
             }
+
+            Console.WriteLine(TotalBills);
         }
 
     }

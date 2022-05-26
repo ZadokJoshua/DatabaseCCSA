@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FluentNHibernate.Mapping;
 
 namespace HospitalManagementSystem_LiveEvaluation2.Models
 {
-    internal class AccountantMap
+    public class AccountantMap : ClassMap<Accountant>
     {
+        public AccountantMap()
+        {
+            Id(x => x.Id);
+            Map(x => x.FirstName);
+            Map(x => x.LastName);
+            Map(x => x.Gender);
+            References(x => x.Hospital);
+        }
     }
 }

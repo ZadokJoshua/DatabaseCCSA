@@ -11,7 +11,7 @@ namespace HospitalManagementSystem_LiveEvaluation2.Models
         public virtual List<Patients> Patient { get; set; }
         public virtual Hospital Hospital { get; set; }
 
-        public virtual bool CheckPatientStatus()
+        public virtual bool CheckPatientStatus(Patients patients)
         {
             if(Patient is RegisteredPatients)
             {
@@ -19,7 +19,7 @@ namespace HospitalManagementSystem_LiveEvaluation2.Models
             }
             else
             {
-                Console.WriteLine("Please go and register");
+                Console.WriteLine("Please go and register Sir/Ma");
                 return false;
             }
         }

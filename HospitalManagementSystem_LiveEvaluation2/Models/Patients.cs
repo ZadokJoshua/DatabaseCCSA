@@ -9,14 +9,23 @@ namespace HospitalManagementSystem_LiveEvaluation2.Models
 {
     public class Patients : Human
     {
+        Receptionist receptionist = new Receptionist();
+
         public virtual int HospitalNumber { get; set; }
         public virtual Doctors Doctor { get; set; }
-        public virtual DateTime AppointmentTime { get; set; }
 
-        public virtual void BookAppointment()
+
+        public virtual void BookAppointment(Patients patients)
         {
-            var appointment = new Appointment();
-            appointment.AppointmentActivity();
+            if (receptionist.CheckPatientStatus(patients) is true)
+            {
+                var appointment = new Appointment();
+                appointment.AppointmentActivity(); 
+            }
+            else
+            {
+
+            }
         }
     }
 }

@@ -5,16 +5,13 @@ namespace HospitalManagementSystem_LiveEvaluation2.Activities
 {
     public class Appointment : Activity
     {
+        public static decimal TotalBills = 0;
         public virtual Doctors Doctor { get; set; }
         public virtual List<Condition> Condition { get; set; }
         public virtual List<Drug> Drugs{ get; set; }
         public virtual DateTime AppointmentTime { get; set; }
 
-
         IDictionary<string, decimal> billBreakdom = new Dictionary<string, decimal>();
-
-
-        public static decimal TotalBills = 0;
 
         public void AddBill(string details, decimal payment)
         {

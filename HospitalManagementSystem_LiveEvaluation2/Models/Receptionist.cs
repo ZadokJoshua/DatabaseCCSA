@@ -13,7 +13,7 @@ namespace HospitalManagementSystem_LiveEvaluation2.Models
 
         public virtual bool CheckPatientStatus(Patients patients)
         {
-            if(Patient is RegisteredPatients)
+            if (Patient is RegisteredPatients)
             {
                 return true;
             }

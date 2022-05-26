@@ -11,8 +11,10 @@ namespace HospitalManagementSystem_LiveEvaluation2.Models
     {
         Receptionist receptionist = new Receptionist();
 
+        public virtual int Age { get; set; }
         public virtual int HospitalNumber { get; set; }
         public virtual Doctors Doctor { get; set; }
+
 
 
         public virtual void BookAppointment(Patients patients)

@@ -14,6 +14,7 @@ namespace HospitalManagementSystem_LiveEvaluation2.Models
         public virtual int Age { get; set; }
         public virtual int HospitalNumber { get; set; }
         public virtual Doctors Doctor { get; set; }
+        public virtual Hospital Hospital { get; set; }
 
 
 

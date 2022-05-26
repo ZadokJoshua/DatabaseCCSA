@@ -18,6 +18,7 @@ namespace HospitalManagementSystem_LiveEvaluation2.Models
             Map(x => x.Age);
             HasOne(x => x.HospitalNumber);
             HasOne(x => x.Doctor);
+            References(x => x.Doctor);
         }
     }
 }

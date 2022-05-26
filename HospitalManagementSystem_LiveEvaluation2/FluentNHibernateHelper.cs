@@ -1,39 +1,56 @@
 ﻿using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
+using FluentNHibernate.Mapping;
 using NHibernate;
 using NHibernate.Tool.hbm2ddl;
 
 namespace HospitalManagementSystem_LiveEvaluation2
 {
-    public class FluentNHibernateHelper
-    {
-        private ISessionFactory _sessionFactory;
-        private ISessionFactory SessionFactory
+        public class FluentNHibernateHelper
         {
-            get
+            //The session factory links your objects/code to your database
+            public ISessionFactory _sessionFactory;
+
+            public ISessionFactory SessionFactory
             {
-                if (_sessionFactory == null)
+                get
                 {
-                    InitialiseSessionFactory();
+                    if (_sessionFactory == null)
+                    {
+                        InitialiseSessionFactory();
+                    }
+                    return _sessionFactory;
                 }
-                return _sessionFactory;
+
+            }
+
+
+            public void InitialiseSessionFactory()
+            {
+                //Fluently.Configure( ) connects your session factory to your database
+                //To initialise your database you need your connection string as it gives you access to your database
+
+                _sessionFactory = Fluently.Configure().Database(
+                    // Database all have one thing in common and that is called connection string
+                    MsSqlConfiguration.MsSql2012.ConnectionString(
+                        @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\hp\Documents\HospitalManagementSystem.mdf;Integrated Security=True;Connect Timeout=30"
+                        )
+                    .ShowSql())
+
+                    //Mapping helps the database recognise which properties become the columns to use to create the table
+                    .Mappings(map => map.FluentMappings.AddFromAssemblyOf<Program>())
+
+                    //This ensures that the databse is created            
+                    .ExposeConfiguration(cfg => new SchemaExport(cfg).Create(true, true))
+
+                    .BuildSessionFactory();
+
+
+            }
+
+            public ISession OpenSession()
+            {
+                return SessionFactory.OpenSession();
             }
         }
-
-        // Database all have one thing in common and that is called connection string
-        public void InitialiseSessionFactory()
-        {
-            _sessionFactory = Fluently.Configure()
-                .Database(MsSqlConfiguration.MsSql2012.ConnectionString(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\hp\Documents\HospitalManagementSystem.mdf;Integrated Security=True;Connect Timeout=30"))
-                .Mappings(m => m.FluentMappings.AddFromAssemblyOf<Program>())
-                .ExposeConfiguration(cfg => new SchemaExport(cfg).Create(true, true))
-                .BuildSessionFactory();
-        }
-
-        public ISession OpenSession() //Starts the process
-        {
-            return SessionFactory.OpenSession();
-        }
     }
-
-}

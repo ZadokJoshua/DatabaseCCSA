@@ -10,7 +10,7 @@ namespace DataConnections2.Mappings
             Id(x => x.Id);
             Map(x => x.FullName);
             HasMany(x => x.Subjects);
-            HasOne(x => x.F);
+            HasOne(x => x.Class);
         }
     }
 }

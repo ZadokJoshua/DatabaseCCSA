@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataBaseAndORM", "DataBaseA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataConnections", "DataConnections\DataConnections.csproj", "{D06A9544-0ACD-494A-B674-6DDFC3789A5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataConnections2", "ConsoleApp1\DataConnections2.csproj", "{7404CF06-63D9-469D-B11D-F79092485BFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataConnections2", "ConsoleApp1\DataConnections2.csproj", "{7404CF06-63D9-469D-B11D-F79092485BFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalManagementSystem_LiveEvaluation2", "HospitalManagementSystem_LiveEvaluation2\HospitalManagementSystem_LiveEvaluation2.csproj", "{0A6D54BF-9C01-407D-BDA3-A497A677DE2D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{7404CF06-63D9-469D-B11D-F79092485BFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7404CF06-63D9-469D-B11D-F79092485BFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7404CF06-63D9-469D-B11D-F79092485BFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A6D54BF-9C01-407D-BDA3-A497A677DE2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A6D54BF-9C01-407D-BDA3-A497A677DE2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A6D54BF-9C01-407D-BDA3-A497A677DE2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A6D54BF-9C01-407D-BDA3-A497A677DE2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

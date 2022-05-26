@@ -9,9 +9,8 @@ FROM Patients
 WHERE Appointment_Schedule = "weekly" AND Appointment_Schedule = "monthly" AND Appointment_Schedule = "quarterly" AND Appointment_Schedule = "yearly";
 
 -- Extract all doctors in the hospital
-SELECT * 
-FROM Patients 
-WHERE Appointment_Schedule = "weekly" AND Appointment_Schedule = "monthly" AND Appointment_Schedule = "quarterly" AND Appointment_Schedule = "yearly";
+SELECT doctors
+FROM hospital;
 
 -- Extract all hospital patients
 SELECT Patients 
@@ -28,7 +27,3 @@ FROM Hospital
 WHERE payment_status = true;
 
 -- Extract the top 10 drugs that are mostly bought**
---SELECT column_name(s)
---FROM Drug
---ORDER BY total_sales_naira
---FETCH FIRST number ROWS ONLY;

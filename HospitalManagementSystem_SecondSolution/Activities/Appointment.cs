@@ -10,7 +10,6 @@ namespace HospitalManagementSystem_LiveEvaluation2.Activities
         public virtual Doctor? Doctor { get; set; }
         public virtual DateTime AppointmentTime { get; set; }
 
-
         public static decimal TotalBills = 0;
 
         //public virtual List<Condition> Condition { get; set; }

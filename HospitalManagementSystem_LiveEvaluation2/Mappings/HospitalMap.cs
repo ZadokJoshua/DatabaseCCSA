@@ -14,7 +14,7 @@ namespace HospitalManagementSystem_LiveEvaluation2.Models
             HasMany(x => x.Doctors);
             HasMany(x => x.Pharmacists);
             HasOne(x => x.Receptionist);
-            HasOne(x => x.Accountant);
+            References(x => x.Accountant);
         }
     }
 }

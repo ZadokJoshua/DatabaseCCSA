@@ -18,5 +18,7 @@ namespace HospitalManagementSystem_LiveEvaluation2.Models
         public virtual List<Pharmacists> Pharmacists { get; set; }
         public virtual Receptionist Receptionist { get; set; }
         public virtual Accountant Accountant { get; set; }
+
+
     }
 }

@@ -7,6 +7,5 @@ using NHibernate.Tool.hbm2ddl;
 
 Console.WriteLine("ORM!");
 
-var helper = new FluentNHibernateHelper();
 FluentNHibernateHelper.OpenSession();
 

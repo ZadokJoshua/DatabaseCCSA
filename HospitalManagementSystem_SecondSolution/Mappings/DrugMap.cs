@@ -1,11 +1,4 @@
 ﻿using FluentNHibernate.Mapping;
-using HospitalManagementSystem_LiveEvaluation2.Items;
-using HospitalManagementSystem_LiveEvaluation2.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HospitalManagementSystem_LiveEvaluation2.Mappings
 {

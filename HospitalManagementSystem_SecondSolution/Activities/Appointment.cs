@@ -43,8 +43,8 @@ namespace HospitalManagementSystem_LiveEvaluation2.Activities
 
         public void AppointmentActivity()
         {
-            Console.WriteLine("Your condition - " + Condition);
-            Console.WriteLine("Drugs delivered - " + Drugs);
+            //Console.WriteLine("Your condition - " + Condition);
+            //Console.WriteLine("Drugs delivered - " + Drugs);
 
             // Print BillBreakdown
             foreach (KeyValuePair<string, decimal> kvp in billBreakdom)

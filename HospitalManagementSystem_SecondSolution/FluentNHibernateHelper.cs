@@ -41,34 +41,34 @@ namespace HospitalManagementSystem_LiveEvaluation2
                 return SessionFactory.OpenSession();
             }
 
-        public static void saveData<T>(T model)
-        {
-            var session = FluentNHibernateHelper.OpenSession();
-            using (var transaction = session.BeginTransaction())
-            {
-                session.Save(model);
-                transaction.Commit();
-            }
-        }
+        //public static void saveData<T>(T model)
+        //{
+        //    var session = FluentNHibernateHelper.OpenSession();
+        //    using (var transaction = session.BeginTransaction())
+        //    {
+        //        session.Save(model);
+        //        transaction.Commit();
+        //    }
+        //}
 
-        public static void updateData<T>(T model)
-        {
-            var session = OpenSession();
-            using (var transaction = session.BeginTransaction())
-            {
-                session.Update(model);
-                transaction.Commit();
-            }
-        }
+        //public static void updateData<T>(T model)
+        //{
+        //    var session = OpenSession();
+        //    using (var transaction = session.BeginTransaction())
+        //    {
+        //        session.Update(model);
+        //        transaction.Commit();
+        //    }
+        //}
 
-        public static void deleteData<T>(T model)
-        {
-            var session = OpenSession();
-            using (var transaction = session.BeginTransaction())
-            {
-                session.Delete(model);
-                transaction.Commit();
-            }
-        }
+        //public static void deleteData<T>(T model)
+        //{
+        //    var session = OpenSession();
+        //    using (var transaction = session.BeginTransaction())
+        //    {
+        //        session.Delete(model);
+        //        transaction.Commit();
+        //    }
+        //}
     }
     }

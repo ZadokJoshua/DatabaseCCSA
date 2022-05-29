@@ -14,6 +14,7 @@ namespace HospitalManagementSystem_LiveEvaluation2.Models
             Map(x => x.MobileNumber);
             References(x => x.Hospital);
             Map(x => x.Specialization);
+            HasMany(x => x.Nurses);
         }
     }
 }

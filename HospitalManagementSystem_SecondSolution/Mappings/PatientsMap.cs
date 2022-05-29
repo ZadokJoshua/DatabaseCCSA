@@ -1,23 +1,21 @@
 ﻿using FluentNHibernate.Mapping;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using HospitalManagementSystem_SecondSolution.HospitalModel.Patient;
 
 namespace HospitalManagementSystem_LiveEvaluation2.Models
 {
-    public class PatientsMap : ClassMap<Patients>
+    public class PatientsMap : ClassMap<Patient>
     {
         public PatientsMap()
         {
-            Id(x => x.Id);
+            Id(x => x.PatientId);
+            Id(x => x.HospitalNumber);
             Map(x => x.FirstName);
             Map(x => x.LastName);
-            Map(x => x.Gender);
+            Map(x => x.Address);
+            Map(x => x.MobileNo);
             Map(x => x.Age);
-            HasOne(x => x.HospitalNumber);
-            HasOne(x => x.Doctor);
+            Map(x => x.RegistrationStatus);
+            References(x => x.Hospital);
             References(x => x.Doctor);
         }
     }

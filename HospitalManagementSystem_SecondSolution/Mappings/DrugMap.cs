@@ -1,4 +1,5 @@
 ﻿using FluentNHibernate.Mapping;
+using HospitalManagementSystem_LiveEvaluation2.Items;
 
 namespace HospitalManagementSystem_LiveEvaluation2.Mappings
 {
@@ -9,7 +10,7 @@ namespace HospitalManagementSystem_LiveEvaluation2.Mappings
             Id(x => x.Id);
             Map(x => x.Name);
             Map(x => x.Price);
-            HasManyToMany(x => x.Patients);
+            References(x => x.Pharmacist);
         }
     }
 }

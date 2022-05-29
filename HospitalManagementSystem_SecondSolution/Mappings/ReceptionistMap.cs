@@ -1,4 +1,5 @@
 ﻿using FluentNHibernate.Mapping;
+using HospitalManagementSystem_SecondSolution.HospitalModel.Staffs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,12 +12,12 @@ namespace HospitalManagementSystem_LiveEvaluation2.Models
     {
         public ReceptionistMap()
         {
-            Id(x => x.Id);
+            Id(x => x.StaffId);
             Map(x => x.FirstName);
             Map(x => x.LastName);
-            Map(x => x.Gender);
-            HasMany(x => x.Patient);
-            HasOne(x => x.Hospital);
+            Map(x => x.Address);
+            Map(x => x.MobileNumber);
+            References(x => x.Hospital);
         }
     }
 }

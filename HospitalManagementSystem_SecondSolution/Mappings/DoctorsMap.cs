@@ -1,18 +1,19 @@
 ﻿using FluentNHibernate.Mapping;
+using HospitalManagementSystem_SecondSolution.HospitalModel.Staffs;
 
 namespace HospitalManagementSystem_LiveEvaluation2.Models
 {
-    public class DoctorsMap : ClassMap<Doctors>
+    public class DoctorsMap : ClassMap<Doctor>
     {
         public DoctorsMap()
         {
-            Id(x => x.Id);
+            Id(x => x.StaffId);
             Map(x => x.FirstName);
             Map(x => x.LastName);
-            Map(x => x.Gender);
-            HasMany(x => x.Patients);
-            HasMany(x => x.Nurses);
+            Map(x => x.Address);
+            Map(x => x.MobileNumber);
             References(x => x.Hospital);
+            Map(x => x.Specialization);
         }
     }
 }

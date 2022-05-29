@@ -1,4 +1,5 @@
 ﻿using FluentNHibernate.Mapping;
+using HospitalManagementSystem_SecondSolution.HospitalModel.Staffs;
 
 namespace HospitalManagementSystem_LiveEvaluation2.Models
 {
@@ -6,10 +7,11 @@ namespace HospitalManagementSystem_LiveEvaluation2.Models
     {
         public AccountantMap()
         {
-            Id(x => x.Id);
+            Id(x => x.StaffId);
             Map(x => x.FirstName);
             Map(x => x.LastName);
-            Map(x => x.Gender);
+            Map(x => x.Address);
+            Map(x => x.MobileNumber);
             References(x => x.Hospital);
         }
     }

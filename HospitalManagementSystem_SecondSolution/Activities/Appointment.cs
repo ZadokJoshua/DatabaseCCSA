@@ -1,4 +1,5 @@
-﻿using HospitalManagementSystem_SecondSolution.HospitalModel.Patient;
+﻿using HospitalManagementSystem_LiveEvaluation2.Items;
+using HospitalManagementSystem_SecondSolution.HospitalModel.Patient;
 using HospitalManagementSystem_SecondSolution.HospitalModel.Staffs;
 
 namespace HospitalManagementSystem_LiveEvaluation2.Activities
@@ -9,6 +10,7 @@ namespace HospitalManagementSystem_LiveEvaluation2.Activities
         public virtual Patient? Patient { get; set; }
         public virtual Doctor? Doctor { get; set; }
         public virtual DateTime AppointmentTime { get; set; }
+        public virtual string Condition { get; set; }
 
         public static decimal TotalBills = 0;
 

@@ -1,1 +1,5 @@
-﻿Console.WriteLine("Hello, ORM!");
+﻿using HospitalManagementSystem_LiveEvaluation2;
+
+Console.WriteLine("Hello, ORM!");
+
+FluentNHibernateHelper.OpenSession();

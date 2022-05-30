@@ -8,5 +8,13 @@ namespace HospitalManagementSystem_LiveEvaluation2.Items
         public virtual string Name { get; set; }
         public virtual decimal Price { get; set; }
         public virtual Pharmacist Pharmacist { get; set; }
+
+        public string ToString()
+        {
+            return 
+                $"-------------------------------\n" +
+                $"Name: {Name} -- Price: {Price}\n" + 
+                "-------------------------------";
+        }
     }
 }

@@ -14,48 +14,45 @@ namespace HospitalManagementSystem_LiveEvaluation2.Activities
 
         public static decimal TotalBills = 0;
 
-        //public virtual List<Condition> Condition { get; set; }
-        //public virtual List<Drug> Drugs{ get; set; }
+        IDictionary<string, decimal> billBreakdom = new Dictionary<string, decimal>();
 
-        //IDictionary<string, decimal> billBreakdom = new Dictionary<string, decimal>();
+        public void AddBill(string details, decimal payment)
+        {
+            billBreakdom.Add(details, payment);
+            TotalBills += payment;
+        }
 
-        //public void AddBill(string details, decimal payment)
-        //{
-        //    billBreakdom.Add(details, payment);
-        //    TotalBills += payment;
-        //}
+        public void RemoveBill(string details)
+        {
+            if (billBreakdom.ContainsKey(details))
+            {
+                billBreakdom.Remove(details);
+                Console.WriteLine("Removed - " + details);
+            }
+            else
+            {
+                Console.WriteLine("Didn't find - " + details);
+            }
+        }
 
-        //public void SubtractBill(string details)
-        //{
-        //    if (billBreakdom.ContainsKey(details))
-        //    {
-        //        billBreakdom.Remove(details);
-        //        Console.WriteLine("Removed - " + details);
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine("Didn't find - " + details);
-        //    }
-        //}
+        public decimal PrintBills()
+        {
+            return TotalBills;
+        }
 
-        //public decimal PrintBills()
-        //{
-        //    return TotalBills;
-        //}
+        public void AppointmentActivity()
+        {
+            Console.WriteLine("Your condition - " + Condition);
+            Console.WriteLine("Drugs delivered - " + Drugs);
 
-        //public void AppointmentActivity()
-        //{
-        //    //Console.WriteLine("Your condition - " + Condition);
-        //    //Console.WriteLine("Drugs delivered - " + Drugs);
+            // Print BillBreakdown
+            foreach (KeyValuePair<string, decimal> kvp in billBreakdom)
+            {
+                Console.WriteLine("Key: {0}, Value: {1}", kvp.Key, kvp.Value);
+            }
 
-        //    // Print BillBreakdown
-        //    foreach (KeyValuePair<string, decimal> kvp in billBreakdom)
-        //    {
-        //        Console.WriteLine("Key: {0}, Value: {1}", kvp.Key, kvp.Value);
-        //    }
-
-        //    Console.WriteLine(TotalBills);
-        //}
+            Console.WriteLine(TotalBills);
+        }
 
     }
 }

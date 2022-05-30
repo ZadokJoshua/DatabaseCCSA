@@ -1,4 +1,5 @@
-﻿using HospitalManagementSystem_LiveEvaluation2.Items;
+﻿using HospitalManagementSystem_LiveEvaluation2.Activities;
+using HospitalManagementSystem_LiveEvaluation2.Items;
 using HospitalManagementSystem_SecondSolution.HospitalModel.Staffs;
 
 namespace HospitalManagementSystem_SecondSolution.HospitalModel.Patient
@@ -15,5 +16,18 @@ namespace HospitalManagementSystem_SecondSolution.HospitalModel.Patient
         public virtual bool RegistrationStatus { get; set; }
         public virtual Hospital Hospital { get; set; }
         public virtual Doctor Doctor { get; set; }
+
+        public void BookAppointment()
+        {
+            if (RegistrationStatus is true)
+            {
+                var appointment = new Appointment();
+                appointment.AppointmentActivity();
+            }
+            if (RegistrationStatus is false)
+            {
+
+            }
+        }
     }
 }
